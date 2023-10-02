@@ -1,0 +1,107 @@
+*{color: white; margin: 0; padding: 0;}
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+}
+
+section {
+    max-width: 1920px; /* Largura máxima */
+    height: 95vh; /* 100% da altura da tela */
+    padding: 20px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 auto;
+    /* border: 1px solid #ccc; */
+    /* border-radius: 5px; */
+
+    
+}
+
+/* Section 1 */
+#portfolio{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(./../assets/images/backgrounds/Background_1.jpg);
+    background-color: #f0f0f0;
+}
+
+#portfolio div{
+    width: 40%;
+    height: 30%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* border: 2px solid #f0f0f0; */
+}
+
+#portfolio h3{
+    font-size: 50px;
+    font-weight: 200;
+}
+#portfolio h1{
+    font-size: 80px;
+    color: #256673;
+}
+
+#SkillsAnimation{
+    overflow: hidden;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid white;
+
+    animation: Typing 5s steps(30, end) infinite, BorderTypin .5s infinite;
+}
+
+#SkillsAnimation::after{
+    content: "Web Developer";
+    /* animation: SkillsText 1s infinite; */
+}
+
+@keyframes Typing {
+    from { width: 0 }
+    50%{ width: calc(12.5ch)} 
+    /* 2.5 segundos */
+  }
+  
+@keyframes BorderTypin {
+    from, to { border-color: transparent }
+    50% { border-color: #ffff}
+}
+
+
+
+/* 768 */
+@media (max-width: 1250px) {
+    section {
+        max-width: 90%;
+        height: 80vh;
+    }
+
+    #portfolio div{
+        width: 95%;
+        height: 50%;
+    
+        /* border: 2px solid #f0f0f0;   */
+    }
+    #portfolio h3{
+        font-size: 30px;
+        font-weight: 200;
+    }
+    #portfolio h1{
+        font-size: 50px;
+        color: #256673;
+    }
+    
+
+
+}
